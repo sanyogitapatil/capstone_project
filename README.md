@@ -22,7 +22,7 @@ git clone https://github.com/Sujeet1604/capstone_project.git
 
 
  ##### Now you can start coding. Once you have done with your coding, :eyes:do not forget:eyes: to commit and push your code.
- ##### :heavy_check_mark: ** You should pull the code everytime when you are going to code. This will update and sync your code with thhe latest one.
+ ##### :heavy_check_mark: ** You should pull the code everytime when you are going to code. This will update and sync your code with the latest one.
  ##### :heavy_check_mark: ** Once you will done with coding, please make sure to commit and push this code. So that, your code will be synced and main repo will be updated. So, if someone else pull the code, he/she will get the updated code.
  ##### :heavy_check_mark: ** I have created seperate R files for everyone. Please code only in your R code. Once tested, it will be merged with mainCode.R
  
