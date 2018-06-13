@@ -28,3 +28,18 @@ hvbp<-merge(hvbp,hvbp_outcome_08_26_2016)
 hvbp<-merge(hvbp,hvbp_pn_08_26_2016)
 hvbp<-merge(hvbp,hvbp_scip_08_26_2016)
 hvbp<-merge(hvbp,hvbp_tps_08_26_2016)
+HAI <- left_join(`HAI_FluVac_2016Q1_state_03_17_2017-Corrected`,`HAI_FluVac_2016Q1_natl_03_17_2017-Corrected`,c("RPTG_PRD_START_DT","RPTG_PRD_END_DT"))
+`Healthcare-Associated-Infections` <-left_join(left_join(`Healthcare-Associated-Infections-Hospital`,`Healthcare-Associated-Infections-State`,
+                     c("Measure.Name","Measure.ID","Measure.Start.Date","Measure.End.Date")),`Healthcare-Associated-Infections-National`,
+                     c("Measure.Name","Measure.ID","Measure.Start.Date","Measure.End.Date"))
+
+#,`Healthcare-Associated-Infections-National` ,c("Measure.Name","Measure.ID"))
+
+
+'HOSPITAL_QUARTERLY_IPFQR'<-left_join(HOSPITAL_QUARTERLY_IPFQR_MEASURES_HOSPITAL,HOSPITAL_QUARTERLY_IPFQR_MEASURES_STATE,by.x="HBIPS.2_Measure_Description",by.y="S_HBIPS.2_Measure_Description")
+
+Medicare_Spending <- left_join(left_join(`Medicare-Hospital-Spending-per-Patient-Hospital`,`Medicare-Hospital-Spending-per-Patient-State`,c("Measure.ID","Measure.Name")),`Medicare-Hospital-Spending-per-Patient-National`,c("Measure.ID","Measure.Name"))
+
+`Outpatient-Imaging_eff`<-left_join(left_join(`Outpatient-Imaging-Efficiency-Hospital`,`Outpatient-Imaging-Efficiency-State`,c("Measure.ID","Measure.Name")),`Outpatient-Imaging-Efficiency-National`,c("Measure.ID","Measure.Name"))
+payment <- left_join(left_join(`Payment-and-Value-of-Care-Hospital`,`Payment-State`,by.x=c("Payment.Measure.ID","Payment.Measure.Name"), by.y=c("Measure.ID","Measure.Name")),`Payment-National`,c("Measure.ID","Measure.Name"))
+redadd_death<-left_join(left_join(`Readmissions-and-Deaths-Hospital`,`Readmissions-and-Deaths-State`,c("Measure.ID","Measure.Name")),`Readmissions-and-Deaths-National`,c("Measure.ID","Measure.Name"))
